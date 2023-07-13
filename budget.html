@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>budget App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: brown;
+            font-size: 35px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .res_data {
+            display: flex;
+            justify-content: space-around;
+            height: 80px;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 400px;
+            margin: 20px;
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+
+        .box_data {
+            border: 1px solid black;
+            width: 500px;
+            margin: 20px;
+            padding: 0 10px;
+            background-color: blanchedalmond;
+        }
+
+        input[type=submit] {
+            color: green;
+            width: 150px;
+            height: 40px;
+        }
+
+        input {
+            width: 350px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BUDGET APP</h1>
+
+    <div class="container">
+        <div>
+            <div class="container">
+                <div id="budget_data" class="box">
+                    <!-- <form action="#" method="post"> -->
+                    <label for="budget">Please Enter Your Budget</label><br><br>
+                    <input type="number" name="budget" id="budget"><br><br>
+                    <input type="submit" value="Calculate" onclick="showAmount()">
+                    <!-- </form> -->
+                </div>
+            </div>
+        
+            <div id="expense_data" class="box">
+                <label for="expense">Please Enter Your Expense</label><br><br>
+                <input type="text" name="data" id="data"><br><br>
+        
+                <label for="expense_amount">Please Enter Expense Amount</label><br><br>
+                <input type="number" name="expense_amount" id="expense_amount"><br><br>
+                <input type="submit" value="Add Expense" onclick="handledisc()">
+            </div>
+        </div>
+        <div>
+            <div id="cal_data" class="box_data">
+                <div class="res_data">
+                    <p>BUDGET <i class="fa-solid fa-money-bill-1"></i></p>
+                    <p>EXPENSE <i class="fa-solid fa-credit-card"></i></p>
+                    <p>BALANCE <i class="fa-solid fa-indian-rupee-sign"></i></p>
+                </div>
+                <div id="res_Title" class="res_data">
+    
+                </div>
+            </div>
+            <table border="1">
+                <thead id="list_data">
+                    <tr>
+                        <th>Expanse Title</th>
+                        <th>Expanse Value</th>
+                        <th>Delet</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    
+
+    <script src="./budget.js"></script>
+</body>
+
+</html>
